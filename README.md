@@ -56,18 +56,54 @@
 
 ## 1. Introduction
 
+DeepSeekMoE 16B is a Mixture-of-Experts (MoE) language model with 16.4B parameters. 
+It employs an innovative MoE architecture, which involves two principal strategies: fine-grained expert segmentation and shared experts isolation. 
+It is trained from scratch on 2T tokens, and exhibits comparable performance with DeekSeek 7B and LLaMA2 7B, with only about 40% of computations. 
+For research purposes, we release the model checkpoints of DeepSeekMoE 16B Base and DeepSeekMoE 16B Chat to the public, which can be deployed on a single GPU with 40GB of memory without the need for quantization.
+
 ## 2. Evaluation Results
+
+### DeepSeekMoE 16B Base
+
+We evaluate DeepSeekMoE 16B on various benchmarks and compare it with a series of models, as shown in the following.
+
+- Comparison with open source models on the Open LLM Leaderboard. DeepSeekMoE 16B consistently outperforms models with a similar number of activated parameters by a large margin, and achieves comparable performance with LLaMA2 7B, which has approximately 2.5 times the activated parameters.
+
+<p align="center">
+<img src="images/evaluation_deepseekmoe16b_base_openllm.jpg" alt="table" width="50%">
+</p>
+
+- Comparison with DeepSeek 7B on our internal benchmarks. DeepSeek 7B is a dense model trained on the same corpus as DeepSeekMoE 16B. With only 40.5% of computations, DeepSeekMoE 16B achieves comparable performance with DeepSeek 7B. 
+
+<p align="center">
+<img src="images/evaluation_deepseekmoe16b_base_1.jpg" alt="table" width="50%">
+</p>
+
+- Comparison with LLaMA2 7B on our internal benchmarks. With only 39.6% of computations, DeepSeekMoE 16B outperforms LLaMA2 7B on the majority of benchmarks. 
+
+<p align="center">
+<img src="images/evaluation_deepseekmoe16b_base_2.jpg" alt="table" width="50%">
+</p>
+
+### DeepSeekMoE 16B Chat
+
+We also evaluate DeepSeekMoE 16B Chat on various benchmarks and compare it with DeepSeek 7B Chat and LLaMA2 7B SFT. All of the compared models follow the same fine-tuning setting and data for fair comparison. 
+The evaluation results are shown in the following. With only about 40% of computations, DeepSeekMoE 16B Chat achieves comparable or better performance than DeepSeek 7B Chat and LLaMA2 7B SFT. 
+
+<p align="center">
+<img src="images/evaluation_deepseekmoe16b_chat.jpg" alt="table" width="60%">
+</p>
 
 ## 3. Model Downloads
 
-We release the DeepSeek MoE 16B, including both base and chat models, to the public. To support a broader and more diverse range of research within both academic and commercial communities. Please **note** that the use of this model is subject to the terms outlined in [License section](#5-license). Commercial usage is permitted under these terms.
+We release the DeepSeekMoE 16B, including both base and chat models, to the public. To support a broader and more diverse range of research within both academic and commercial communities. Please **note** that the use of this model is subject to the terms outlined in [License section](#5-license). Commercial usage is permitted under these terms.
 
 ### Huggingface
 
 |         Model         | Sequence Length |                                Download                                 |
 |:---------------------:|:---------------:|:-----------------------------------------------------------------------:|
-| DeepSeek MoE 16B Base  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-moe-16b-base)  |
-| DeepSeek MoE 16B Chat  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-moe-16b-chat)  |
+| DeepSeekMoE 16B Base  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-moe-16b-base)  |
+| DeepSeekMoE 16B Chat  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-moe-16b-chat)  |
 
 ## 4. Quick Start
 ### Installation
@@ -136,7 +172,7 @@ Assistant:
 
 **Note:** By default (`add_special_tokens=True`), our tokenizer automatically adds a `bos_token` (`<｜begin▁of▁sentence｜>`) before the input text. Additionally, since the system prompt is not compatible with this version of our models, we DO NOT RECOMMEND including the system prompt in your input.
 
-### How to Fine-tune DeepSeek-MoE
+### How to Fine-tune DeepSeekMoE
 
 We provide script `fintune/finetune.py` for users to finetune our models on downstream tasks.
 
@@ -149,7 +185,7 @@ pip install -r requirements.txt
 Please follow [Sample Dataset Format](https://huggingface.co/datasets/garage-bAInd/Open-Platypus) to prepare your training data.
 Each item has two required fields `instruction` and `output`.
 
-After data preparation, you can use the sample shell script to finetune deepseek-MoE model. 
+After data preparation, you can use the sample shell script to finetune the DeepSeekMoE model. 
 Remember to specify `DATA_PATH`, `OUTPUT_PATH`.
 And please choose appropriate hyper-parameters(e.g., `learning_rate`, `per_device_train_batch_size`) according to your scenario.
 
@@ -221,11 +257,17 @@ deepspeed finetune.py \
 ```
 
 ## 5. License
-This code repository is licensed under the MIT License. The use of DeepSeek models is subject to the Model License. DeepSeek supports commercial use.
+This code repository is licensed under the MIT License. The use of DeepSeekMoE models is subject to the Model License. DeepSeekMoE supports commercial use.
 
 See the [LICENSE-CODE](LICENSE-CODE) and [LICENSE-MODEL](LICENSE-MODEL) for more details.
 
 ## 6. Citation
+
+```
+@article{deepseekmoe,
+  [coming soon]
+}
+```
 
 
 ## 7. Contact
