@@ -1,0 +1,11 @@
+torch>=2.0.1
+tokenizers>=0.14.0
+transformers>=4.36.2
+accelerate
+attrdict
+tqdm
+
+deepspeed
+datasets
+tensorboardX
+peft
