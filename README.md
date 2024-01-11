@@ -53,6 +53,10 @@
   <a href="#6-citation">Citation</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/deepseek-ai/DeepSeek-MoE/blob/main/DeepSeekMoE.pdf"><b>Paper Preview</b></a>
+</p>
+
 
 ## 1. Introduction
 
