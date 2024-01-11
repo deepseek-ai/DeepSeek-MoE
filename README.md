@@ -54,7 +54,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/deepseek-ai/DeepSeek-MoE/blob/main/DeepSeekMoE.pdf"><b>Paper Preview</b></a>
+  <a href="https://github.com/deepseek-ai/DeepSeek-MoE/blob/main/DeepSeekMoE.pdf"><b>Paper Preview</b>👁️</a>
 </p>
 
 
