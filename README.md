@@ -54,7 +54,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/deepseek-ai/DeepSeek-MoE/blob/main/DeepSeekMoE.pdf"><b>Paper Preview</b>👁️</a>
+  <a href="https://arxiv.org/pdf/2401.06066.pdf"><b>Paper Link</b>👁️</a>
 </p>
 
 
@@ -269,8 +269,13 @@ See the [LICENSE-CODE](LICENSE-CODE) and [LICENSE-MODEL](LICENSE-MODEL) for more
 ## 6. Citation
 
 ```
-@article{deepseekmoe,
-  [coming soon]
+@article{dai2024deepseekmoe,
+  author={Damai Dai and Chengqi Deng and Chenggang Zhao and R. X. Xu and Huazuo Gao and Deli Chen and Jiashi Li and Wangding Zeng and Xingkai Yu and Y. Wu and Zhenda Xie and Y. K. Li and Panpan Huang and Fuli Luo and Chong Ruan and Zhifang Sui and Wenfeng Liang},
+  title={DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models}, 
+  journal   = {CoRR},
+  volume    = {abs/2401.06066},
+  year      = {2024},
+  url       = {https://arxiv.org/abs/2401.06066},
 }
 ```
 
