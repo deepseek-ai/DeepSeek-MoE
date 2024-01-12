@@ -62,7 +62,7 @@
 
 DeepSeekMoE 16B is a Mixture-of-Experts (MoE) language model with 16.4B parameters. 
 It employs an innovative MoE architecture, which involves two principal strategies: fine-grained expert segmentation and shared experts isolation. 
-It is trained from scratch on 2T tokens, and exhibits comparable performance with DeekSeek 7B and LLaMA2 7B, with only about 40% of computations. 
+It is trained from scratch on 2T English and Chinese tokens, and exhibits comparable performance with DeekSeek 7B and LLaMA2 7B, with only about 40% of computations. 
 For research purposes, we release the model checkpoints of DeepSeekMoE 16B Base and DeepSeekMoE 16B Chat to the public, which can be deployed on a single GPU with 40GB of memory without the need for quantization.
 The model code file can be found [here](https://huggingface.co/deepseek-ai/deepseek-moe-16b-base/blob/main/modeling_deepseek.py).
 
