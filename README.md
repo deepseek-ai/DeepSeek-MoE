@@ -193,6 +193,8 @@ Each item has two required fields `instruction` and `output`.
 After data preparation, you can use the sample shell script to finetune the DeepSeekMoE model. 
 Remember to specify `DATA_PATH`, `OUTPUT_PATH`.
 And please choose appropriate hyper-parameters(e.g., `learning_rate`, `per_device_train_batch_size`) according to your scenario.
+We have used flash_attention2 by default. For devices supported by flash_attention, you can refer [here](https://github.com/Dao-AILab/flash-attention).
+For this configuration, zero_stage needs to be set to 3, and we run it on eight A100 40 GPUs.
 
 ```bash
 DATA_PATH="<your_data_path>"
@@ -224,7 +226,7 @@ deepspeed finetune.py \
     --use_lora False
 ```
 
-You can also finetune the model with 4/8-bits qlora, feel free to try it.
+You can also finetune the model with 4/8-bits qlora, feel free to try it. For this configuration, it is possible to run on a single A100 80G GPU, and adjustments can be made according to your resources.
 ```bash
 DATA_PATH="<your_data_path>"
 OUTPUT_PATH="<your_output_path>"
