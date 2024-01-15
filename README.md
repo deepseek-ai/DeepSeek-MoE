@@ -103,12 +103,12 @@ The evaluation results are shown in the following. With only about 40% of comput
 
 We release the DeepSeekMoE 16B, including both base and chat models, to the public. To support a broader and more diverse range of research within both academic and commercial communities. Please **note** that the use of this model is subject to the terms outlined in [License section](#5-license). Commercial usage is permitted under these terms.
 
-### Huggingface
+### Hugging Face
 
 |         Model         | Sequence Length |                                Download                                 |
 |:---------------------:|:---------------:|:-----------------------------------------------------------------------:|
-| DeepSeekMoE 16B Base  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-moe-16b-base)  |
-| DeepSeekMoE 16B Chat  |      4096       | 🤗 [HuggingFace](https://huggingface.co/deepseek-ai/deepseek-moe-16b-chat)  |
+| DeepSeekMoE 16B Base  |      4096       | 🤗 [Hugging Face](https://huggingface.co/deepseek-ai/deepseek-moe-16b-base)  |
+| DeepSeekMoE 16B Chat  |      4096       | 🤗 [Hugging Face](https://huggingface.co/deepseek-ai/deepseek-moe-16b-chat)  |
 
 ## 4. Quick Start
 ### Installation
@@ -119,9 +119,9 @@ On the basis of `Python >= 3.8` environment, install the necessary dependencies 
 pip install -r requirements.txt
 ```
 
-### Inference with Huggingface's Transformers
+### Inference with Hugging Face's Transformers
 
-You can directly employ [Huggingface's Transformers](https://github.com/huggingface/transformers) for model inference.
+You can directly employ [Hugging Face's Transformers](https://github.com/huggingface/transformers) for model inference.
 
 **Text Completion**
 
