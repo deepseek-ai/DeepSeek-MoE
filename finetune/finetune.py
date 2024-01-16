@@ -194,7 +194,7 @@ def build_model(model_args, training_args, checkpoint_dir):
             bnb_4bit_compute_dtype=compute_dtype,
             bnb_4bit_use_double_quant=model_args.double_quant,
             bnb_4bit_quant_type=model_args.quant_type,
-        ),
+        ) if model_args.use_lora else None,
         torch_dtype=compute_dtype,
         trust_remote_code=True,
     )
